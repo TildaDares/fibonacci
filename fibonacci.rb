@@ -14,22 +14,13 @@ def fib_rec(n)
   n < 2 ? n : fib_rec(n-1) + fib_rec(n-2)
 end
 
-def main
-  puts "How many numbers of the fibonacci would you like to print?"
-  num = gets.chomp
-
-  until /[0-9]/ =~ num
-    puts 'Invalid'
-    puts "How many numbers of the fibonacci would you like to print?"
-    num = gets.chomp
-  end
-
-  for i in (1..num.to_i)
+def main(n)
+  for i in (1..n)
     print fib_rec(i)
     print ' '
   end
   puts "\n"
 end
 
- main
+ main(10)
  fib(5)
